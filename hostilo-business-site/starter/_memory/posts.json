@@ -1,0 +1,24 @@
+{
+  "languages": {
+    "pl": {
+      "post_path": "aktualnosci/{slug}.html",
+      "lists": [
+        "aktualnosci.html",
+        "index.html"
+      ],
+      "feed": "aktualnosci/feed.xml",
+      "feed_title": "Aktualności · Firma Przykład",
+      "date_format": "DD.MM.YYYY"
+    },
+    "en": {
+      "post_path": "en/news/{slug}.html",
+      "lists": [
+        "en/news.html",
+        "en/index.html"
+      ],
+      "feed": "en/news/feed.xml",
+      "feed_title": "News · Firma Przykład",
+      "date_format": "YYYY-MM-DD"
+    }
+  }
+}

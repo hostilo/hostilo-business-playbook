@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}} | Firma Przykład</title>
+  <meta name="description" content="{{summary}}">
+  <link rel="canonical" href="https://example.com/aktualnosci/{{slug}}">
+  <link rel="alternate" hreflang="pl" href="https://example.com/aktualnosci/{{slug}}">
+  <link rel="alternate" hreflang="en" href="https://example.com/en/news/{{slug}}">
+  <link rel="alternate" hreflang="x-default" href="https://example.com/aktualnosci/{{slug}}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{title}} | Firma Przykład">
+  <meta property="og:description" content="{{summary}}">
+  <meta property="og:url" content="https://example.com/aktualnosci/{{slug}}">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<!-- header -->
+<a class="skip" href="#main">Przejdź do treści</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/">Firma Przykład</a>
+    <nav class="menu" aria-label="Menu">
+      <a href="/">Start</a>
+      <a href="/o-nas">O nas</a>
+      <a href="/aktualnosci" aria-current="page">Aktualności</a>
+      <a href="/kontakt">Kontakt</a>
+    </nav>
+    <nav class="lang" aria-label="Język">
+      <a href="/aktualnosci/{{slug}}" hreflang="pl" lang="pl" aria-current="true">PL</a>
+      <a href="/en/news/{{slug}}" hreflang="en" lang="en">EN</a>
+    </nav>
+  </div>
+</header>
+<!-- /header -->
+<main id="main" class="wrap page post">
+  <p class="date"><time datetime="{{date_iso}}">{{date}}</time></p>
+  <h1>{{title}}</h1>
+  {{#image}}<img src="{{image}}" alt="{{image_alt}}" width="1600" height="900">{{/image}}
+  {{content}}
+  <p><a href="/aktualnosci">← Wszystkie aktualności</a></p>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "{{title}}", "datePublished": "{{date_iso}}", "image": "{{image}}", "publisher": {"@type": "Organization", "name": "Firma Przykład sp. z o.o."}}</script>
+</main>
+<!-- footer -->
+<footer class="site-footer">
+  <div class="wrap"><p>© 2026 Firma Przykład sp. z o.o. · ul. Przykładowa 1, 00-001 Warszawa · <a href="mailto:biuro@example.com">biuro@example.com</a></p></div>
+</footer>
+<!-- /footer -->
+</body>
+</html>

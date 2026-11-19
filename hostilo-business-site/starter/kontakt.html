@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt | Firma Przykład</title>
+  <meta name="description" content="Formularz kontaktowy i dane firmy.">
+  <link rel="canonical" href="https://example.com/kontakt">
+  <link rel="alternate" hreflang="pl" href="https://example.com/kontakt">
+  <link rel="alternate" hreflang="en" href="https://example.com/en/contact">
+  <link rel="alternate" hreflang="x-default" href="https://example.com/kontakt">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kontakt | Firma Przykład">
+  <meta property="og:description" content="Formularz kontaktowy i dane firmy.">
+  <meta property="og:url" content="https://example.com/kontakt">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<!-- header -->
+<a class="skip" href="#main">Przejdź do treści</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/">Firma Przykład</a>
+    <nav class="menu" aria-label="Menu">
+      <a href="/">Start</a>
+      <a href="/o-nas">O nas</a>
+      <a href="/aktualnosci">Aktualności</a>
+      <a href="/kontakt" aria-current="page">Kontakt</a>
+    </nav>
+    <nav class="lang" aria-label="Język">
+      <a href="/kontakt" hreflang="pl" lang="pl" aria-current="true">PL</a>
+      <a href="/en/contact" hreflang="en" lang="en">EN</a>
+    </nav>
+  </div>
+</header>
+<!-- /header -->
+<main id="main">
+<section class="wrap page"><h1>Kontakt</h1>
+<p>Napisz do nas, odpowiemy zwykle w ciągu jednego dnia roboczego.</p>
+<form class="contact-form" action="https://hostilo.app/api_form.php" method="POST">
+  <!-- SITE_TOKEN: the site's own token from get_site ("Contact form") or the Hostilo dashboard -->
+  <input type="hidden" name="site_token" value="SITE_TOKEN">
+  <input type="hidden" name="_next" value="https://example.com/dziekujemy">
+  <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+  <label for="f-name">Imię i nazwisko</label>
+  <input id="f-name" name="name" autocomplete="name">
+  <label for="f-email">E-mail *</label>
+  <input id="f-email" name="email" type="email" required autocomplete="email">
+  <label for="f-company">Firma</label>
+  <input id="f-company" name="company" autocomplete="organization">
+  <label for="f-msg">Wiadomość *</label>
+  <textarea id="f-msg" name="message" required maxlength="5000" rows="6"></textarea>
+  <label class="check"><input type="checkbox" name="consent" value="yes" required> Zgadzam się na kontakt w sprawie mojego zapytania. <a href="/polityka-prywatnosci">Polityka prywatności</a></label>
+  <button class="btn" type="submit">Wyślij</button>
+</form></section>
+</main>
+<!-- footer -->
+<footer class="site-footer">
+  <div class="wrap"><p>© 2026 Firma Przykład sp. z o.o. · ul. Przykładowa 1, 00-001 Warszawa · <a href="mailto:biuro@example.com">biuro@example.com</a></p></div>
+</footer>
+<!-- /footer -->
+</body>
+</html>
