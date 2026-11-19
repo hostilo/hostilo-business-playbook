@@ -164,7 +164,7 @@ Hostilo sites have a built-in form endpoint: no server code, messages go to the 
 | `name` | optional. |
 | other fields | up to 20 extra fields, names without a leading `_`, up to 50 characters, values up to 1000 characters (e.g. `company`, `phone`, `product`, `consent`). |
 | `_honey` | anti-spam trap, must stay empty and hidden. |
-| `_next` | optional thank-you page: full `https://` URL **on the same site** (subdomain or connected custom domain). One per language (`/dziekujemy`, `/en/thank-you`). Without it Hostilo shows its own thank-you page in the visitor's browser language. |
+| `_next` | optional thank-you page: full `https://` URL **on the same site** (subdomain or connected custom domain). One per language (`/dziekujemy`, `/en/thank-you`). Without it Hostilo shows its own thank-you page in the visitor's browser language. Give thank-you pages `<meta name="robots" content="noindex">`. |
 
 ### Rules
 
@@ -429,7 +429,7 @@ Text contrast at least 4.5:1, visible focus styles, "skip to content" link, menu
 
 ### Forms
 - [ ] Hostilo endpoint, correct `site_token`, `_honey` present and hidden, `email` and `message` required, labels, consent with privacy link.
-- [ ] `_next` thank-you page per language exists and is on the same domain.
+- [ ] `_next` thank-you page per language exists, is on the same domain and has `noindex`.
 - [ ] Test message sent from the live site in each language and received by the owner.
 
 ### News (Business)

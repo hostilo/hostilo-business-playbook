@@ -13,7 +13,7 @@
 
 ## Forms
 - [ ] Hostilo endpoint, correct `site_token`, `_honey` present and hidden, `email` and `message` required, labels, consent with privacy link.
-- [ ] `_next` thank-you page per language exists and is on the same domain.
+- [ ] `_next` thank-you page per language exists, is on the same domain and has `noindex`.
 - [ ] Test message sent from the live site in each language and received by the owner.
 
 ## News (Business)
